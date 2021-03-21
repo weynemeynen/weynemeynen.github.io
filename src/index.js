@@ -1,17 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import { ContextProvider } from 'contexts'
 
 import Routes from 'routes'
+import Navbar from "components/Navbar";
 
-function App() {
+import './index.css'
+
+const App = () => {
   return (
-    <div className="app">
-      <h1>Добропожаловать в моё портфолио</h1>
+    <ContextProvider>
       <Router>
+        <Navbar />
         <Routes />
       </Router>
-    </div>
+    </ContextProvider>
   )
 }
 
