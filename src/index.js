@@ -6,6 +6,7 @@ import { ContextProvider } from 'contexts'
 
 import Routes from 'routes'
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 import './index.css'
 
@@ -15,6 +16,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes />
+        <Footer />
       </Router>
     </ContextProvider>
   )
