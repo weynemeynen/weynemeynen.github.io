@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 
-import { ContextProvider } from 'contexts'
+import {ContextProvider} from 'contexts'
 import CurrentUserChecker from 'components/currentUserChecker'
 
 import Routes from 'routes'
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
+import Navbar from 'components/Navbar'
+import Footer from 'components/Footer'
 
 import './index.css'
 
