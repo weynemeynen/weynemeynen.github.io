@@ -25,10 +25,9 @@ code {
   box-shadow: none !important;
 }
 
-.theme-light {
+body.bg-white {
   color: var(--bs-dark);
 }
-.theme-dark {
-  background-color: var(--bs-dark);
+body.bg-dark {
   color: var(--bs-white);
 }

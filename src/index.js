@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import {ContextProvider} from 'contexts'
+import { ContextProvider } from 'contexts'
 import CurrentUserChecker from 'components/currentUserChecker'
 
 import Routes from 'routes'
@@ -15,11 +15,11 @@ const App = () => {
   return (
     <ContextProvider>
       <CurrentUserChecker>
-        <Router>
+        <BrowserRouter>
           <Navbar />
           <Routes />
           <Footer />
-        </Router>
+        </BrowserRouter>
       </CurrentUserChecker>
     </ContextProvider>
   )
