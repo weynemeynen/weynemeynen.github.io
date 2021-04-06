@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { ContextProvider } from 'contexts'
 import CurrentUserChecker from 'components/currentUserChecker'
 
-import Routes from 'routes'
+import routes from 'routes'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
 import './index.css'
+
+const routesComponents = routes.map(route => {
+  return <Route path={route.path}
+    component={route.component}
+    exact={route.exact}
+    key={route.path}
+  />
+})
 
 const App = () => {
   return (
@@ -17,7 +25,9 @@ const App = () => {
       <CurrentUserChecker>
         <BrowserRouter>
           <Navbar />
-          <Routes />
+          <Switch>
+            {routesComponents}
+          </Switch>
           <Footer />
         </BrowserRouter>
       </CurrentUserChecker>
