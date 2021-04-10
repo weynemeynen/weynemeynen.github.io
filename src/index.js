@@ -23,13 +23,13 @@ const App = () => {
   return (
     <ContextProvider>
       <CurrentUserChecker>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <Switch>
             {routesComponents}
           </Switch>
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
       </CurrentUserChecker>
     </ContextProvider>
   )
