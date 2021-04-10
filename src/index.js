@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import { ContextProvider } from 'contexts'
 import CurrentUserChecker from 'components/currentUserChecker'
@@ -10,6 +11,8 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
 import './index.css'
+
+const history = createBrowserHistory()
 
 const routesComponents = routes.map(route => {
   return <Route path={route.path}
@@ -23,7 +26,7 @@ const App = () => {
   return (
     <ContextProvider>
       <CurrentUserChecker>
-        <BrowserRouter>
+        <BrowserRouter history={history}>
           <Navbar />
           <Switch>
             {routesComponents}
