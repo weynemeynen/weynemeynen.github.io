@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://weynemeynen.github.io/weynemeynen.github.io/",
+  "homepage": "https://weynemeynen.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
