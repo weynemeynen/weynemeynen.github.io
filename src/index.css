@@ -22,3 +22,7 @@ body.bg-white {
 body.bg-dark {
   color: var(--bs-white);
 }
+
+.backdrop {
+  display: none;
+}
