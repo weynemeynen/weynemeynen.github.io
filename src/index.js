@@ -11,13 +11,13 @@ import Footer from 'components/Footer'
 
 import './index.css'
 
-const routesComponents = routes.map(route => {
-  return <Route path={route.path}
+const routesComponents = routes.map(route => (
+  <Route path={route.path}
     component={route.component}
     exact={route.exact}
     key={route.path}
   />
-})
+))
 
 const App = () => {
   return (
